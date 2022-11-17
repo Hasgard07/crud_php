@@ -1,17 +1,19 @@
 <?php require "layout/header.php" ?>
-<h1>NUEVO</h1>
+<div class="container-xl">
+<h1>Editar Producto</h1>
 <hr>
 <form action="">
     <?php foreach ($dato as $value): ?>
     <?php  foreach ($value as $v ): ?>
-    <label for="">NOMBRE</label> <br>
+    <label for="">Nombre</label> <br>
     <input type="text" name="nombre" value="<?php echo $v['nombre'] ?>"><br>
-    <label for="">PRECIO</label><br>
+    <label for="">Precio</label><br>
     <input type="text" name="precio" value="<?php echo $v['precio'] ?>"><br>
     <input type="hidden" name="id" value="<?php echo $v['id'] ?>">
-    <input type="submit" name="btn" value="ACTUALIZAR">
+    <input type="submit" name="btn" class="btn btn-warning my-2" value="Actualizar">
     <?php endforeach ?>
     <?php endforeach ?>
     <input type="hidden" name="m" value="update">
 </form>
+</div>
 <?php require "layout/footer.php" ?>

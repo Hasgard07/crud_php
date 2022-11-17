@@ -45,11 +45,16 @@
                     <li class="nav-item">
                         <a class="nav-link" href="index.php?m=contactanos">Contactanos</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="login.php?m=waiting">Loging</a>
-                    </li>
                     <?php
+                    if (empty($_SESSION["id"])) {
+                        echo "<li class='nav-item'>";
+                        echo "<a class='nav-link' href='login.php?m=waiting'>Loging</a>";
+                        echo "</li>";
+                    }
                     if (!empty($_SESSION["id"])) {
+                        echo "<li class='nav-item'>";
+                        echo "<a class='nav-link'm href='./producto.php'>Productos</a>";
+                        echo "</li>";
                         echo "<li class='nav-item'>";
                         echo "<a class='nav-link'm href='controller/logout.php'>Salir</a>";
                         echo "</li>";

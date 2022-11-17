@@ -1,5 +1,7 @@
 <?php
-session_start();
+if(!isset($_SESSION)){
+    session_start();
+}
 require_once("model/base.php");
 require_once("controller/producto.php");
 class loginController extends productoController{
