@@ -1,4 +1,8 @@
-<?php require "layout/header.php" ?>
+<?php require "layout/header.php";
+if(empty($_SESSION["id"])) {
+	header("location: ./index.php");
+}
+?>
 <div class="container-xl">
     <h1>Nuevo Producto</h1>
     <hr>

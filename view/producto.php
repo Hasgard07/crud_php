@@ -1,7 +1,7 @@
 <?php
-/*if(empty($_SESSION["id"])) {
+if(empty($_SESSION["id"])) {
 	header("location: ./index.php");
-}*/
+}
 ?>
 <?php require "layout/header.php" ?>
 <div class="container-xl">
